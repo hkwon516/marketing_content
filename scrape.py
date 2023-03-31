@@ -41,7 +41,7 @@ for i in range(20):
                     f.write("### " + child.get_text() + "\n" * 2)
                 elif child.name == "img" :
                     print(child["src"] + "\n" * 2)
-                    f.write("![Image]" + child["src"] + "\n" * 2)
+                    f.write("![Image](" + child["src"] +")" + "\n" * 2)
                 elif child.name == "p":
                     f.write(child.get_text() + "\n" * 2)
 driver.quit()
